@@ -77,6 +77,5 @@ childV_in_op <-dplyr::slice_max(childV_in, order_by=deg.in,  n = 530) %>%
   left_join(data, by= "Author") %>% 
   distinct(Author, .keep_all = TRUE)
 
-
 # 5. Save list of nodes with in-degree 
-write_xlsx(childV_in, "childV_in.xlsx")
+write_xlsx(childV_in_op, "childV_in_op.xlsx")
